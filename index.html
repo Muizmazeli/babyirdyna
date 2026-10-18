@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Peonies, for Irdyna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8e8ec; --paper:#fffafb; --ink:#3b1d2b; --muted:#7d5666; --accent:#b83a6b; --line:#e8c6d1; --leaf:#4f6f52;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#1d1219;--paper:#2a1a23;--ink:#f6e4ea;--muted:#c9a3b2;--accent:#f08ab0;--line:#4a3040;--leaf:#8fb392;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#1d1219;--paper:#2a1a23;--ink:#f6e4ea;--muted:#c9a3b2;--accent:#f08ab0;--line:#4a3040;--leaf:#8fb392;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,sans-serif;line-height:1.6}
+h1,h2,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
+.hero{max-width:1200px;margin:0 auto;padding:48px 24px 32px;display:grid;grid-template-columns:.8fr 1.3fr;gap:24px;align-items:center;min-height:90vh}
+.hero h1{font-size:clamp(3.4rem,9vw,6.5rem);line-height:.95;margin:0 0 20px;letter-spacing:-.01em}
+.hero p{max-width:30ch;color:var(--muted);font-size:1.1rem;margin:0 0 28px}
+.btn{display:inline-block;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:12px 26px;font:600 1rem Nunito,sans-serif;text-decoration:none;cursor:pointer}
+.btn:focus-visible,input:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.bouquet{width:100%;max-width:680px;filter:drop-shadow(0 28px 34px rgba(184,58,107,.28));justify-self:center;overflow:visible}
+.bloom{transform-box:fill-box;transform-origin:center;animation:open 1.6s cubic-bezier(.2,.8,.2,1) both}
+.b2{animation-delay:.25s}.b3{animation-delay:.5s}.b4{animation-delay:.75s}
+@keyframes open{from{transform:scale(.3) rotate(-25deg);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.bloom{animation:none}}
+.letter-wrap{max-width:680px;margin:0 auto;padding:40px 24px 80px}
+.controls{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.controls label{flex:1 1 200px;font-size:.9rem;color:var(--muted)}
+.controls input{display:block;width:100%;margin-top:4px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font:inherit}
+.letter{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:clamp(28px,6vw,56px);box-shadow:0 20px 50px -30px var(--accent)}
+.letter h2{font-size:2.2rem;margin:0 0 4px}
+.date{color:var(--muted);font-size:.9rem;margin:0 0 28px}
+.letter p{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.3rem;line-height:1.65;margin:0 0 1.1em;max-width:60ch}
+.sign{font-style:italic}
+[hidden]{display:none!important}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px}
+.sign strong{display:block;font-size:1.7rem;color:var(--accent);font-weight:600}
+@media (max-width:760px){.hero{grid-template-columns:1fr;text-align:center;min-height:0;padding-top:32px}.hero p{margin-inline:auto}.bouquet{order:-1;max-width:440px}}
+</style>
+</head>
+<body>
+<header class="hero" id="hero">
+  <div>
+    <h1>Peonies,<br>for Irdyna</h1>
+    <p>A bouquet from Muiz, picked to say what words sometimes can’t.</p>
+    <button class="btn" id="read" type="button">Read your letter</button>
+  </div>
+  <svg class="bouquet" viewBox="0 0 600 640" role="img" aria-label="A bouquet of pink peonies tied with a ribbon">
+    <defs id="defs"></defs>
+    <g id="stems" fill="none" stroke="var(--leaf)" stroke-width="5" stroke-linecap="round"></g>
+    <g id="leaves" fill="var(--leaf)"></g>
+    <g id="blooms"></g>
+    <g>
+      <path d="M268 560 L332 560 L326 614 L274 614Z" fill="var(--accent)"/>
+      <path d="M300 560 C250 518 200 545 232 582 C254 598 288 576 300 560 C312 576 346 598 368 582 C400 545 350 518 300 560Z" fill="var(--accent)" opacity=".9"/>
+      <circle cx="300" cy="562" r="13" fill="var(--accent)" stroke="#fff" stroke-opacity=".6"/>
+    </g>
+  </svg>
+</header>
+
+<main class="letter-wrap" id="letter" hidden>
+  <div>
+    
+    
+  </div>
+  <article class="letter" id="p1" aria-live="polite">
+    <h2 id="greet">Dear Baby Irdyna,</h2>
+    <p class="date" id="date"></p>
+    
+    
+    
+    
+    
+    
+  
+    <p>Baby, you know tak, I suka buat benda-benda macam ni sebab I suka tengok reaction you. 😭🤍 The way you react tu comel sangat, sampai kadang-kadang I sendiri senyum tengok you. I don’t know how to explain it, but seeing you happy makes me happy too. Sometimes I buat benda kecil je, but bila tengok you punya reaction, terus rasa macam nak buat lagi just to see that cute little side of you.</p>
+    <p>And honestly, baby, I rasa benda macam ni yang buat I appreciate you even more. It’s not always about doing something big for you, sometimes I just want to see you smile and be the reason behind it. Alhamdulillah, Allah bagi I peluang untuk kenal you and experience all these little moments with you.</p>
+    <p>I can’t wait to see you next month, baby. Lama lagi, but I dah fikir macam-macam benda I nak buat with you. For now, just know that I really enjoy making you happy, and kalau boleh, I nak tengok that cute reaction of yours banyak kali lagi. Hehe, sayang you, baby. 🤍</p>
+    <p class="sign"><strong>Muiz :3</strong></p>
+    <div class="nav"><button class="btn" id="home" type="button">Back to bouquet</button></div>
+  </article>
+</main>
+
+<script>
+const NS="http://www.w3.org/2000/svg";
+const el=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e};
+const defs=document.getElementById("defs");
+const palettes=[["#fde4ee","#f3a6c3","#d4608f"],["#fff3f6","#f9cfdd","#e79bb7"],["#f9b9cf","#e8719f","#b83a6b"],["#ffe9e2","#f8bfb5","#e98c8c"],["#fffafa","#fde0e8","#f3b3c9"],["#f6c6e0","#d77fb5","#9e3a82"]];
+palettes.forEach((c,i)=>{
+  const g=el("radialGradient",{id:"g"+i,cx:"50%",cy:"90%",r:"95%"},defs);
+  el("stop",{offset:"0","stop-color":c[2]},g);el("stop",{offset:".55","stop-color":c[1]},g);el("stop",{offset:"1","stop-color":c[0]},g);
+});
+// bloom: [x, y, radius, palette, class]
+const blooms=[[300,135,84,4,"b1"],[190,175,82,1,"b1"],[410,175,84,0,"b1"],[105,265,76,2,"b2"],[495,268,78,5,"b2"],[245,225,92,0,"b2"],[360,225,92,2,"b3"],[150,305,80,4,"b3"],[455,308,82,1,"b3"],[300,290,100,3,"b4"],[200,385,70,0,"b4"],[405,388,72,4,"b4"],[300,400,66,2,"b4"]];
+const stems=document.getElementById("stems"),leaves=document.getElementById("leaves"),bl=document.getElementById("blooms");
+blooms.forEach(([x,y,r])=>{el("path",{d:`M300 560 C300 ${(560+y)/2+20} ${x} ${(560+y)/2} ${x} ${y+r*.4}`},stems)});
+[[150,300,200,1.4],[100,390,165,1.3],[450,300,-20,1.4],[500,390,15,1.3],[190,150,235,1.2],[410,150,-55,1.2],[240,100,255,1],[360,100,-75,1],[170,450,145,1.2],[430,450,35,1.2],[75,310,190,1.1],[525,310,-10,1.1]].forEach(([x,y,rot,sc])=>{
+  const l=el("path",{d:"M0 0 C28 -22 70 -20 98 0 C70 22 28 22 0 0Z",transform:`translate(${x} ${y}) rotate(${rot}) scale(${sc})`,opacity:".9"},leaves);
+});
+function petal(w,h){return `M0 0 C${-w} ${-h*.35} ${-w*1.05} ${-h*.85} ${-w*.55} ${-h*.97} Q${-w*.25} ${-h*1.06} 0 ${-h*.93} Q${w*.25} ${-h*1.06} ${w*.55} ${-h*.97} C${w*1.05} ${-h*.85} ${w} ${-h*.35} 0 0Z`}
+blooms.forEach(([x,y,r,p,cls])=>{
+  const g=el("g",{class:"bloom "+cls},bl);
+  const inner=el("g",{transform:`translate(${x} ${y})`},g);
+  // rings: [petal count, length scale, width scale, offset]
+  [[10,1,.55,0],[9,.88,.52,18],[8,.76,.5,9],[8,.64,.46,26],[7,.52,.42,12],[6,.4,.38,34],[5,.28,.32,20],[5,.16,.26,45]].forEach(([n,ls,ws,off],ri)=>{
+    for(let i=0;i<n;i++){
+      const a=off+i*360/n+(ri%2?7:0);
+      el("path",{d:petal(r*ws,r*ls),fill:`url(#g${p})`,stroke:palettes[p][2],"stroke-opacity":".35","stroke-width":".8",transform:`rotate(${a}) translate(0 ${-r*.04*ri})`},inner);
+    }
+  });
+  el("circle",{r:r*.07,fill:palettes[p][2],opacity:".7"},inner);
+});
+// buds
+[[55,390],[545,392]].forEach(([x,y])=>{
+  el("path",{d:`M300 560 C260 520 ${x+40} ${y+90} ${x} ${y+8}`,fill:"none",stroke:"var(--leaf)","stroke-width":4,"stroke-linecap":"round"},stems);
+  el("ellipse",{cx:x,cy:y,rx:15,ry:19,fill:"url(#g2)"},bl);
+});
+
+
+function upd(){
+  document.getElementById("greet").textContent=to.value.trim()?`Dear ${to.value.trim()},`:"Dear friend,";
+  document.getElementById("sig").textContent=from.value.trim()||"Your friend";
+}
+
+document.getElementById("date").textContent=new Date().toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+function show(n){document.getElementById("hero").hidden=n!==0;document.getElementById("letter").hidden=n===0;window.scrollTo(0,0);}
+document.getElementById("read").addEventListener("click",()=>show(1));
+document.getElementById("home").addEventListener("click",()=>show(0));
+
+
+</script>
+</body>
+</html>
